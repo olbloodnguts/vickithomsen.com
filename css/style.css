@@ -1,0 +1,138 @@
+/* vickithomsen.com — plain HTML/CSS rebuild of the original Weebly "light" theme */
+
+:root {
+  --band: #272e34;        /* dark band behind the title */
+  --page: #f2f2f2;        /* page background below the band */
+  --panel: #ffffff;       /* main white panel */
+  --panel-edge: #e3e3e3;
+  --nav: #192025;         /* menu bar */
+  --nav-hover: #263037;
+  --title: #cccccc;       /* site title on the dark band */
+  --text: #5f5f5f;
+  --heading: #4a4a4a;
+  --link: #af5211;        /* rust links, as on the original */
+  --link-hover: #6188ab;
+  --banner-edge: #e5e5e5;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: linear-gradient(var(--band), var(--band)) top / 100% 365px no-repeat, var(--page);
+  color: var(--text);
+  font: 14px/1.6 Arial, Helvetica, sans-serif;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover, a:focus-visible { color: var(--link-hover); text-decoration: underline; }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Title on the dark band */
+.site-header { padding: 25px 21px; min-height: 90px; }
+.site-title, .site-title:hover {
+  color: var(--title);
+  font-size: 30px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.site-title:hover { color: #fff; }
+
+/* White panel holding menu, banner and content */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: 5px;
+  padding: 14px 20px 0;
+}
+
+/* Menu bar */
+.nav {
+  background: var(--nav);
+  border-radius: 4px;
+  margin: 0 0 7px;
+  padding: 0 0 0 15px;
+  font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+.nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+.nav a {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  padding: 20px 13px;
+  margin-right: 1px;
+}
+.nav a:hover, .nav a:focus-visible, .nav a[aria-current="page"] {
+  color: var(--link);
+  background: var(--nav-hover);
+  text-decoration: none;
+}
+
+/* Sunset banner */
+.banner {
+  border: 1px solid var(--banner-edge);
+  padding: 1px;
+  box-shadow: 0 4px 4px -3px rgba(0, 0, 0, .12);
+}
+.banner div {
+  height: 150px;
+  background: url("../images/banner.jpg") center / cover no-repeat;
+}
+
+/* Page content */
+.content { padding: 24px 0 28px; min-height: 400px; }
+.content p { margin: 0 0 1em; }
+.content h1, .content h2 {
+  color: var(--heading);
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0;
+}
+.content h2 { margin-top: 1.4em; }
+.dates { margin: 0 0 1em; font-size: 13px; }
+
+.portrait {
+  float: left;
+  width: 120px;
+  height: auto;
+  margin: 5px 14px 10px 0;
+}
+.clear { clear: both; }
+
+.place { margin: 0 0 1em; }
+.place strong { color: var(--heading); }
+
+.links { list-style: none; margin: 0; padding: 0; }
+.links li { margin: 0 0 .2em; }
+
+.content .farewell { text-align: center; margin-top: 2em; }
+
+/* Footer */
+.site-footer {
+  padding: 25px 15px 40px;
+  font-family: "Lucida Sans", "Lucida Grande", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #666;
+  text-align: right;
+}
+
+/* Phones */
+@media (max-width: 640px) {
+  body { font-size: 16px; background-size: 100% 260px, auto; }
+  .site-header { padding: 18px 16px; min-height: 0; }
+  .site-title { font-size: 22px; }
+  .panel { border-radius: 0; border-left: 0; border-right: 0; padding: 10px 16px 0; }
+  .nav { padding-left: 4px; }
+  .nav a { padding: 15px 10px; font-size: 13px; }
+  .banner div { height: 90px; }
+  .portrait { width: 100px; margin-right: 12px; }
+  .site-footer { text-align: center; padding: 20px 16px 32px; }
+}
