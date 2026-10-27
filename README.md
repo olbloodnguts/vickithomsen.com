@@ -10,7 +10,6 @@ Plain HTML and CSS, no build step. Rebuilt in October 2026 from the original Wee
 | `obituary.html` | The obituary |
 | `css/style.css` | All styling (colors are set at the top) |
 | `images/` | Vicki's photo and the sunset banner (metadata stripped) |
-| `contact.html` | Sends the retired Contact page's old address to the home page |
 | `photogallery/` | Keeps the old `/photogallery` address working (Google Photos album) |
 | `familyforum/` | Keeps the old `/familyforum` address working (Google Group) |
 | `404.html` | Shown for any address that doesn't exist |
