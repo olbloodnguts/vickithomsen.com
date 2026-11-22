@@ -8,6 +8,7 @@ Plain HTML and CSS, no build step. Rebuilt in October 2026 from the original Wee
 | --- | --- |
 | `index.html` | Home page: photo, dates, service details, donations, grief resources |
 | `obituary.html` | The obituary |
+| `discord.html` | How to join the family Discord server (unlisted: not in the menu, hidden from search engines) |
 | `css/style.css` | All styling (colors are set at the top) |
 | `images/` | Vicki's photo and the sunset banner (metadata stripped) |
 | `photogallery/` | Keeps the old `/photogallery` address working (Google Photos album) |
